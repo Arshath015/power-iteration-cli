@@ -1,14 +1,22 @@
-#!/usr/bin/env bash
-# Example usage of power-iteration-cli
-# Prepare a small 3x3 matrix
-mkdir -p data results
-cat > data/matrix.csv << 'EOF'
-4,1,2
-1,3,0
-2,0,5
-EOF
-# Run the CLI
-python cli.py --matrix data/matrix.csv --iterations 2000 --tolerance 1e-9 --output results
-# Display the output
-cat results/eigenvalue.txt
-cat results/eigenvector.txt
+"""Example usage of power-iteration-cli."""
+import os
+import subprocess
+
+os.makedirs("data", exist_ok=True)
+os.makedirs("results", exist_ok=True)
+
+with open("data/matrix.csv", "w") as f:
+    f.write("4,1,2\n1,3,0\n2,0,5\n")
+
+subprocess.run([
+    "python", "cli.py",
+    "--matrix", "data/matrix.csv",
+    "--iterations", "2000",
+    "--tolerance", "1e-9",
+    "--output", "results"
+], check=True)
+
+with open("results/eigenvalue.txt") as f:
+    print(f.read())
+with open("results/eigenvector.txt") as f:
+    print(f.read())
