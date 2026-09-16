@@ -1,7 +1,8 @@
-  File "/home/runner/work/power-iteration-cli/power-iteration-cli/./examples/run_example.py", line 4
-    mkdir -p data results
-             ^^^^
-SyntaxError: invalid syntax
-(example run failed — see log above)
+Dominant eigenvalue: 6.669079086622121
+Eigenvector written to results/eigenvector.txt
+6.669079086622121
 
-Recorded: 2026-09-16T02:29:50Z
+0.631187504858 0.172044469007 0.756308822106
+
+
+Recorded: 2026-09-16T02:32:19Z
