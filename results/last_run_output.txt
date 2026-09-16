@@ -1,3 +1,7 @@
-No example/demo script found.
+  File "/home/runner/work/power-iteration-cli/power-iteration-cli/./examples/run_example.py", line 4
+    mkdir -p data results
+             ^^^^
+SyntaxError: invalid syntax
+(example run failed — see log above)
 
-Recorded: 2026-09-16T02:24:38Z
+Recorded: 2026-09-16T02:29:50Z
